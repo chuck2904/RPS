@@ -85,17 +85,17 @@ function playGame(choice){
 	switch((computerChoice-switchToNum(choice)+3)%3){
 		case 0:
 			increaseScore("ties-score");
-			result+= "tied to the computer's"+switchToWord(computerChoice);
+			result+= "tied to the computer's "+switchToWord(computerChoice);
 		break;
 
 		case 1:
 			increaseScore("computer-score");
-			result+= "lost to the computer's"+switchToWord(computerChoice);
+			result+= "lost to the computer's "+switchToWord(computerChoice);
 		break;
 
 		case 2:
 			increaseScore("your-score");
-			result+= "won to the computer's"+switchToWord(computerChoice);
+			result+= "won to the computer's "+switchToWord(computerChoice);
 			break;
 	}
 
