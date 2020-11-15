@@ -84,19 +84,35 @@ function playGame(choice){
 	let result="Your "+choice+ " ";
 	switch((computerChoice-switchToNum(choice)+3)%3){
 		case 0:
-			result+= "tied to "+switchToWord(computerChoice);
+			increaseScore("ties-score");
+			result+= "tied to the computer's"+switchToWord(computerChoice);
 		break;
 
 		case 1:
-			result+= "lost to "+switchToWord(computerChoice);
+			increaseScore("computer-score");
+			result+= "lost to the computer's"+switchToWord(computerChoice);
 		break;
 
 		case 2:
-			result+= "won to "+switchToWord(computerChoice);
-		break;
+			increaseScore("your-score");
+			result+= "won to the computer's"+switchToWord(computerChoice);
+			break;
 	}
+
+	displayResults(result);
+	
 	return result;
 }
 
+ function displayResults(results){
+ 	var list = document.getElementById('results');
+ 	var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(results));
+    list.appendChild(entry);
 
+ }
+
+ function increaseScore(where){
+ 	document.getElementById(where).innerHTML =Number(document.getElementById(where).innerHTML)+1;
+ }
 

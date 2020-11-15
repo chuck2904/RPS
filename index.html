@@ -6,11 +6,10 @@
 	<meta charset="UTF-8"/>
 
 	<style>
-		div{
-			background-color: red;
+		.float-left{
+    		float: left;
 		}
 	</style>
-	
 
 </head>
 
@@ -23,7 +22,7 @@
 
 
 	<h1>Welcome to Rock-Paper-Scissors Online (RPS)</h1>
-	<h3>To continue, please select your icon on the left. The computer will play automatically (random selection)</h3>
+	<h3>Please select your move below. The computer will play automatically (random selection)</h3>
 
 	<div>
 		<button id="rock" type="button"><img src="./icons/rock.jpg"></button>
@@ -31,9 +30,28 @@
 		<button id="scissors" type="button"><img src="./icons/scissors.jpg"></button>
 	</div>
 
-	<p>
-		sanchos
-	</p>
+	<div>
+		<div> 
+			Your Score:
+			<div id= "your-score">0</div>
+		</div>
+		
+		<div> 
+			Computer Score: 
+			<div id= "computer-score">0</div>
+		</div>
+
+		<div> 
+			Ties: 
+			<div id= "ties-score">0</div>
+		</div>			
+	</div>
+
+	<div>
+		Game Details:
+		<ul id="results"></ul>
+	</div>
+		
 
 
 
